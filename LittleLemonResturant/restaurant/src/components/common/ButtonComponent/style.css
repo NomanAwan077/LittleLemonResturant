@@ -1,0 +1,24 @@
+:root {
+  --primary-green: #495e57;
+  --primary-yellow: #f4ce14;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  border-radius: 16px;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+}
+.outline {
+  background-color: transparent;
+}
+.filled {
+  background-color: var(--primary-yellow);
+  border: none;
+}
