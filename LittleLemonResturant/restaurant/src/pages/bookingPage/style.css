@@ -1,0 +1,25 @@
+:root {
+  --primary-green: #495e57;
+  --primary-yellow: #f4ce14;
+  --white: #ffffff;
+  --black: "#000000";
+}
+
+.login-page .title {
+  color: var(--white);
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-green);
+  min-height: 376px;
+  width: 100%;
+  /* padding: 30px 100px; */
+  align-items: center;
+  gap: 32px;
+  border-bottom: 1px solid gray;
+}

@@ -1,16 +1,22 @@
-import Footer from "../Footer";
-import Header from "../Header";
-import { Outlet } from "react-router-dom";
+import React, { createContext, useContext, useState } from "react";
 
-const Main = ({ children }) => {
+const FormDataContext = createContext();
+
+export const useFormData = () => {
+  return useContext(FormDataContext);
+};
+
+export const Main = ({ children }) => {
+  const [data, setData] = useState({
+    time: "",
+    date: "",
+    numOfGuests: "",
+    Occasion: "",
+  });
+
   return (
-    <>
-      <Header />
-      <main>
-        <Outlet />
-      </main>
-      <Footer />
-    </>
+    <FormDataContext.Provider value={{ data, setData }}>
+      {children}
+    </FormDataContext.Provider>
   );
 };
-export default Main;

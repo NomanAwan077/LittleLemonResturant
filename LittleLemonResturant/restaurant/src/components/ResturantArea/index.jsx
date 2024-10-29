@@ -1,13 +1,9 @@
 import React from "react";
 import "./style.css";
-import ButtonComponent from "../common/ButtonComponent";
-import logoimg from "../../asset/images/HeroImage.png";
-import { useNavigate } from "react-router-dom";
-
-const HeroSection = () => {
-  const navigation = useNavigate();
+import banner from "../../asset/images/branch-banner.png";
+const RestaurantArea = () => {
   return (
-    <div className="hero-wrapper d-grid-2">
+    <div className="area-wrapper d-grid-2">
       <div className="content-side">
         <div className="top-section">
           <h1 className="title">Little Lemon</h1>
@@ -18,16 +14,11 @@ const HeroSection = () => {
             traditional recipes served with a modern twist
           </p>
         </div>
-        <ButtonComponent
-          text="Reserve a Table"
-          contained
-          onClick={() => navigation("/booking")}
-        />
       </div>
       <div className="image-side">
-        <img src={logoimg} />
+        <img src={banner} />
       </div>
     </div>
   );
 };
-export default HeroSection;
+export default RestaurantArea;
